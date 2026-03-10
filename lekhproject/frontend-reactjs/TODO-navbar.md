@@ -1,0 +1,3 @@
+- [x] Update Navbar.css: Add underline to .nav-link:hover, change .signin-btn to green background
+- [x] Update Navbar.js: Import consumerAPI, add useEffect to fetch products and calculate totalPrice, display total in cart badge, add Contact nav-link
+- [ ] Test the navbar changes

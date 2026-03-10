@@ -1,0 +1,320 @@
+.settings-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.settings-page.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.settings-container.dark-mode {
+  background: #2d2d2d;
+  color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.settings-header {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background 0.3s ease;
+}
+
+.settings-header.dark-mode {
+  background: linear-gradient(135deg, #3d8b40, #2e7d32);
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.back-button.dark-mode {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.back-button.dark-mode:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.settings-title {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-icon {
+  font-size: 28px;
+}
+
+.settings-title.dark-mode {
+  color: #f0f0f0;
+}
+
+.settings-content {
+  padding: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.settings-content.dark-mode {
+  background: #2d2d2d;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.settings-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.settings-section.dark-mode {
+  background: #363636;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.settings-section h2.dark-mode {
+  color: #e0e0e0;
+  border-bottom-color: #66bb6a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group.dark-mode label {
+  color: #b0b0b0;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  background-color: white;
+  color: #333;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.form-group input.dark-mode {
+  background-color: #404040;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.form-group input.dark-mode:focus {
+  border-color: #66bb6a;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.checkbox-group label.dark-mode {
+  color: #b0b0b0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  accent-color: #4CAF50;
+}
+
+.checkbox-group input[type="checkbox"].dark-mode {
+  accent-color: #66bb6a;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  resize: vertical;
+  background-color: white;
+  color: #333;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.form-group textarea.dark-mode {
+  background-color: #404040;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.form-group textarea.dark-mode:focus {
+  border-color: #66bb6a;
+}
+
+.message {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.dark-mode.success {
+  background-color: #2e7d32;
+  color: #c8e6c9;
+  border-color: #4caf50;
+}
+
+.message.dark-mode.error {
+  background-color: #c62828;
+  color: #ffcdd2;
+  border-color: #ef5350;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  transition: border-color 0.3s ease;
+}
+
+.settings-actions.dark-mode {
+  border-top-color: #555;
+}
+
+.save-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.save-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.save-button.dark-mode {
+  background: #66bb6a;
+}
+
+.save-button.dark-mode:hover:not(:disabled) {
+  background: #4caf50;
+}
+
+.save-button.dark-mode:disabled {
+  background: #555;
+}
+
+.settings-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.settings-loading.dark-mode {
+  color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 10px;
+  }
+
+  .settings-content {
+    padding: 20px;
+  }
+
+  .settings-header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settings-title {
+    font-size: 20px;
+  }
+}

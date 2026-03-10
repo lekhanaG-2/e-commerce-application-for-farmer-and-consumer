@@ -1,0 +1,443 @@
+.products-page {
+  padding: 80px 20px 20px 20px;
+  max-width: 1600px; /* Increased max-width for better horizontal space */
+  margin: 0 auto; /* Centered horizontally */
+  background: white;
+}
+
+body {
+  background: white;
+}
+
+.products-page main {
+  background: white;
+}
+
+.products-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: white;
+}
+
+.fresh-vegetables-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.badge.organic {
+  background-color: #27ae60;
+}
+
+.badge.new {
+  background-color: #e74c3c;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.product-farmer {
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+  margin-right: 8px;
+}
+
+.star {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.star.filled {
+  color: #f39c12;
+}
+
+.rating-text {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #27ae60;
+  margin-right: 5px;
+}
+
+.unit {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-add-to-cart {
+  flex: 1;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #2980b9;
+}
+
+.btn-add-to-wishlist {
+  flex: 1;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-to-wishlist:hover {
+  background-color: #c0392b;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+/* New vertical category filter styles */
+.category-filter-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 25px 0 0 0; /* Increased margin to move further down from navbar */
+  width: 220px;
+}
+
+.category-button-vertical {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #333;
+  font-size: 1rem;
+  user-select: none;
+  vertical-align: middle; /* Added to vertically align text */
+}
+
+.category-button-vertical:hover {
+  background-color: #f0f0f0;
+  color: #4a90e2;
+}
+
+.category-button-vertical.active {
+  background: linear-gradient(90deg, #d1e8ff, #a3c9ff);
+  color: #1a3e72;
+  font-weight: 800;
+}
+
+.category-button-vertical .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  color: inherit; /* Allow icon color to inherit from button */
+}
+
+/* Assign distinct colors to each category button to color the icons */
+.category-button-vertical.Fresh\ Vegetables {
+  color: #4CAF50; /* Green */
+}
+
+.category-button-vertical.New\ Launches {
+  color: #FF9800; /* Orange */
+}
+
+.category-button-vertical.Fresh\ Fruits {
+  color: #E91E63; /* Pink */
+}
+
+.category-button-vertical.Exotics\ \&\ Premium {
+  color: #3F51B5; /* Indigo */
+}
+
+.category-button-vertical.Flowers\ \&\ Leaves {
+  color: #9C27B0; /* Purple */
+}
+
+.category-button-vertical.Leafy\,\ Herbs\ \&\ Seasonings {
+  color: #8BC34A; /* Light Green */
+}
+
+.category-button-vertical.Organics\ \&\ Hydroponics {
+  color: #009688; /* Teal */
+}
+
+.category-button-vertical.Honey {
+  color: #FFC107; /* Amber */
+}
+
+.category-button-vertical.Dairy {
+  color: #03A9F4; /* Light Blue */
+}
+
+.category-button-vertical.Grains {
+  color: #795548; /* Brown */
+}
+
+.category-button-vertical.All .icon-wrapper {
+  background-color: #fcefe3;
+}
+
+.category-button-vertical.Fresh\ Vegetables .icon-wrapper {
+  background-color: #d0f0c0; /* light green */
+}
+
+.category-button-vertical.New\ Launches .icon-wrapper {
+  background-color: #f9e79f; /* light yellow */
+}
+
+.category-button-vertical.Fresh\ Fruits .icon-wrapper {
+  background-color: #f9d5e5; /* light pink */
+}
+
+.category-button-vertical.Exotics\ \&\ Premium .icon-wrapper {
+  background-color: #d6eaf8; /* light blue */
+}
+
+.category-button-vertical.Flowers\ \&\ Leaves .icon-wrapper {
+  background-color: #f5b7b1; /* light coral */
+}
+
+.category-button-vertical.Leafy\,\ Herbs\ \&\ Seasonings .icon-wrapper {
+  background-color: #a9dfbf; /* medium light green */
+}
+
+.category-button-vertical.Organics\ \&\ Hydroponics .icon-wrapper {
+  background-color: #a3e4d7; /* light teal */
+}
+
+.category-button-vertical.Honey .icon-wrapper {
+  background-color: #f7dc6f; /* light gold */
+}
+
+.btn-wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-wishlist:hover,
+.btn-wishlist:focus {
+  opacity: 0.7;
+  outline: none;
+}
+
+.wishlist-icon {
+  width: 24px;
+  height: 24px;
+  color: black;
+}
+
+.message-box {
+  border: 2px solid #4caf50;
+  background-color: #e8f5e9;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  display: inline-block;
+  min-width: 300px;
+}
+
+.btn-ok {
+  margin-top: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ok:hover {
+  background-color: #388e3c;
+}
+
+.pagination {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem 0;
+  z-index: 10;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  min-height: 48px; /* fixed height to prevent vertical shift */
+}
+
+.pagination span {
+  font-size: 20px;
+}
+
+.pagination button {
+  min-width: 100px; /* fixed width for all buttons */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #2e7d32;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2e7d32;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(46, 125, 50, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  background-color: #f0f0f0;
+  color: #999;
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.pagination button.active {
+  background-color: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.5);
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #3a9a3a;
+  color: white;
+  border-color: #3a9a3a;
+  box-shadow: 0 4px 10px rgba(58, 154, 58, 0.5);
+}

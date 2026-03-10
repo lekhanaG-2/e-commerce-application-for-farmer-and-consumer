@@ -1,0 +1,398 @@
+.account-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding-top: 80px; /* Adjust for navbar height to prevent overlap */
+}
+
+.account-sidebar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.back-to-dashboard {
+  display: block;
+  padding: 16px 24px;
+  color: #2a7f62;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #e9ecef;
+  transition: background 0.2s;
+}
+
+.back-to-dashboard:hover {
+  background: #f8f9fa;
+}
+
+.user-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2a7f62, #4caf50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.user-info h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-info p {
+  margin: 0 0 12px;
+  color: #666;
+  font-size: 14px;
+}
+
+.verified-badge {
+  background: #4caf50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.account-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  color: #666;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+
+.nav-item:hover {
+  background-color: #f8f9fa;
+  color: #2a7f62;
+  border-left-color: #2a7f62;
+}
+
+.nav-item.active {
+  background-color: #e8f5e8;
+  color: #2a7f62;
+  border-left-color: #2a7f62;
+}
+
+.logout-item {
+  margin-top: auto;
+  border-top: 1px solid #e9ecef;
+  color: #d32f2f;
+}
+
+.logout-item:hover {
+  background-color: #ffebee;
+  color: #b71c1c;
+  border-left-color: #d32f2f;
+}
+
+.account-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background: white;
+}
+
+/* Settings Form Styles */
+.settings-section {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+}
+
+.settings-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title {
+  color: #2a7f62;
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2a7f62;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.toggle-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-switch.active {
+  background: #2a7f62;
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle-switch.active .toggle-knob {
+  transform: translateX(26px);
+}
+
+.save-btn {
+  background: #2a7f62;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 16px;
+}
+
+.save-btn:hover {
+  background: #1e5a47;
+}
+
+/* Wallet, Refer, etc. styles remain similar */
+.wallet-content,
+.refer-content {
+  text-align: center;
+}
+
+.wallet-balance-display {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.wallet-balance-display strong {
+  font-size: 36px;
+  color: #2a7f62;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wallet-balance-display p {
+  color: #666;
+  margin: 0 0 16px;
+}
+
+.add-money-btn,
+.share-btn {
+  background: #2a7f62;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-money-btn:hover,
+.share-btn:hover {
+  background: #1e5a47;
+}
+
+.recent-transactions {
+  text-align: left;
+}
+
+.recent-transactions h3 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.refer-content h2 {
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.refer-content p {
+  color: #666;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+/* Dark Mode */
+body.dark-mode .account-page {
+  background: #1a1a1a;
+}
+
+body.dark-mode .account-sidebar {
+  background: #2d2d2d;
+  border-right-color: #555;
+}
+
+body.dark-mode .back-to-dashboard {
+  color: #66bb6a;
+}
+
+body.dark-mode .back-to-dashboard:hover {
+  background: #363636;
+}
+
+body.dark-mode .user-info h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .user-info p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .nav-item {
+  color: #b0b0b0;
+}
+
+body.dark-mode .nav-item:hover {
+  background: #404040;
+  color: #66bb6a;
+  border-left-color: #66bb6a;
+}
+
+body.dark-mode .nav-item.active {
+  background: #4caf50;
+  color: white;
+  border-left-color: #66bb6a;
+}
+
+body.dark-mode .logout-item {
+  border-top-color: #555;
+}
+
+body.dark-mode .logout-item:hover {
+  background: #442626;
+  color: #ef5350;
+  border-left-color: #ef5350;
+}
+
+body.dark-mode .account-content {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .settings-section {
+  background: #2d2d2d;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .settings-section h2,
+body.dark-mode .section-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .form-group label {
+  color: #e0e0e0;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: #404040;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .wallet-balance-display {
+  background: linear-gradient(135deg, #363636, #404040);
+}
+
+body.dark-mode .wallet-balance-display strong {
+  color: #66bb6a;
+}
+
+body.dark-mode .recent-transactions h3,
+body.dark-mode .refer-content h2 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .refer-content p {
+  color: #b0b0b0;
+}

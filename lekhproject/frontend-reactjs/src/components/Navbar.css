@@ -1,0 +1,521 @@
+/* ===== GENERAL ===== */
+.consumer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===== LOGO ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text h1 {
+  font-size: 20px;
+  color: #2a7f62;
+  margin: 0;
+}
+
+.logo-text p {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+/* ===== SEARCH ===== */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  background-color: #f8f5f0;
+  padding: 6px 12px;
+  border-radius: 25px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+  color: #aaa;
+  margin-right: 8px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ===== NAV LINKS + ICONS ===== */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.user-menu:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #2a7f62;
+  text-decoration: underline;
+}
+
+.icon-btn {
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.icon-btn:hover {
+  color: #2a7f62;
+}
+
+/* Cart and Wishlist containers */
+.cart-container, .wishlist-container {
+  position: relative;
+  cursor: pointer;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-wishlist-icon, .cart-icon {
+  position: relative;
+  cursor: pointer;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.nav-wishlist-icon:hover, .cart-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.wishlist-count, .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #f26b38;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 14px;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Icon label below icons */
+.icon-label {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  margin-top: 2px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+}
+
+/* Sign In button */
+.signin-btn {
+  background-color: #2a7f62;
+  color: #fff;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #1e5a47;
+}
+
+/* ===== ACCOUNT MODAL ===== */
+.account-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  overflow: hidden;
+}
+
+.account-sidebar {
+  width: 280px;
+  background: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.user-info {
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2a7f62, #4caf50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: white;
+}
+
+.user-info h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-info p {
+  margin: 0 0 12px;
+  color: #666;
+  font-size: 14px;
+}
+
+.verified-badge {
+  background: #4caf50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.account-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  color: #666;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background-color: #e9ecef;
+  color: #2a7f62;
+}
+
+.nav-item.active {
+  background-color: #2a7f62;
+  color: white;
+}
+
+.logout-item {
+  margin-top: auto;
+  border-top: 1px solid #e9ecef;
+  color: #d32f2f;
+}
+
+.logout-item:hover {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+.account-content {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+  background: white;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #2a7f62;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: #1e5a47;
+}
+
+/* Wallet Content */
+.wallet-content {
+  text-align: center;
+}
+
+.wallet-balance-display {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.wallet-balance-display strong {
+  font-size: 36px;
+  color: #2a7f62;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wallet-balance-display p {
+  color: #666;
+  margin: 0 0 16px;
+}
+
+.add-money-btn {
+  background: #2a7f62;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-money-btn:hover {
+  background: #1e5a47;
+}
+
+.recent-transactions {
+  text-align: left;
+}
+
+.recent-transactions h3 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Refer Content */
+.refer-content {
+  text-align: center;
+}
+
+.refer-content h2 {
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.refer-content p {
+  color: #666;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.share-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.share-btn:hover {
+  background: #45a049;
+}
+
+/* Dark Mode Support for Account Modal */
+body.dark-mode .account-container {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .account-sidebar {
+  background: #2d2d2d;
+  border-right-color: #555;
+}
+
+body.dark-mode .user-info h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .user-info p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .nav-item {
+  color: #b0b0b0;
+}
+
+body.dark-mode .nav-item:hover {
+  background-color: #404040;
+  color: #66bb6a;
+}
+
+body.dark-mode .nav-item.active {
+  background-color: #66bb6a;
+  color: white;
+}
+
+body.dark-mode .logout-item {
+  border-top-color: #555;
+}
+
+body.dark-mode .logout-item:hover {
+  background-color: #442626;
+  color: #ef5350;
+}
+
+body.dark-mode .account-content {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .wallet-balance-display {
+  background: linear-gradient(135deg, #363636, #404040);
+}
+
+body.dark-mode .wallet-balance-display strong {
+  color: #66bb6a;
+}
+
+body.dark-mode .wallet-balance-display p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .recent-transactions h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .refer-content h2 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .refer-content p {
+  color: #b0b0b0;
+}

@@ -1,0 +1,174 @@
+.special-orders {
+  padding: 20px;
+}
+
+.special-orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.special-orders-header h2 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.add-bulk-product-btn,
+.add-order-btn {
+  background-color: #38a169;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.add-bulk-product-btn:hover,
+.add-order-btn:hover {
+  background-color: #2f855a;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+}
+
+.order-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.order-header h3 {
+  margin: 0;
+  color: #2d3748;
+  flex: 1;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-active {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.status-inactive {
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+.order-details {
+  padding: 15px;
+}
+
+.description {
+  color: #4a5568;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.price,
+.quantity,
+.category,
+.delivery-date {
+  color: #718096;
+}
+
+.notes {
+  color: #4a5568;
+  font-style: italic;
+}
+
+.order-actions {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.edit-btn {
+  background-color: #3182ce;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2c5282;
+}
+
+.delete-btn {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c53030;
+}
+
+.special-orders-loading,
+.special-orders-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.special-orders-error {
+  color: #e53e3e;
+}

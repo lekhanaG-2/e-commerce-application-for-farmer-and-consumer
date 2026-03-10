@@ -1,0 +1,98 @@
+.farmer-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  background: #ffffff; /* changed to plain white */
+  padding: 40px;
+  margin-top: 80px;
+}
+
+
+.farmer-login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  border: 2px solid #4CAF50;
+}
+
+.farmer-login-container h2 {
+  margin-bottom: 10px;
+  color: #2E7D32;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.farmer-login-subtitle {
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.farmer-login-container .error {
+  color: #d32f2f;
+  margin-bottom: 20px;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ffcdd2;
+}
+
+.farmer-login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.farmer-login-container input {
+  padding: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.farmer-login-container input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.farmer-login-button {
+  background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.farmer-login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.farmer-login-link {
+  color: #4CAF50;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.farmer-login-link:hover {
+  color: #2E7D32;
+  text-decoration: underline;
+}

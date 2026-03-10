@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farmer Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #2e7d32;
+    }
+    /* Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      padding: 10px 20px;
+      color: white;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      margin-left: 20px;
+    }
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .navbar ul li a:hover {
+      color: #a5d6a7;
+    }
+    /* Welcome Section */
+    .welcome-section {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: #e8f5e9;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 900px;
+    }
+    .welcome-section h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .welcome-section p {
+      font-size: 1.2rem;
+      color: #4caf50;
+    }
+    /* Dashboard Cards */
+    .dashboard-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(46, 125, 50, 0.15);
+      padding: 25px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(46, 125, 50, 0.3);
+    }
+    .card .icon {
+      font-size: 3rem;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+    .card h2 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #1b5e20;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #388e3c;
+    }
+    /* Footer */
+    footer {
+      position: sticky;
+      bottom: 0;
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-weight: 600;
+    }
+    /* Responsive */
+    @media (max-width: 480px) {
+      .welcome-section h1 {
+        font-size: 2rem;
+      }
+      .welcome-section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Agro E-Commerce</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Add Product</a></li>
+      <li><a href="#">My Products</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+  <section class="welcome-section">
+    <h1>Welcome to Your Farmer Dashboard</h1>
+    <p>Manage your farm products, orders, and profile with ease.</p>
+  </section>
+
+  <section class="dashboard-cards">
+    <div class="card">
+      <div class="icon"><i class="fas fa-plus-circle"></i></div>
+      <h2>Add Product</h2>
+      <p>Easily add new products to your farm store.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><i class="fas fa-box-open"></i></div>
+      <h2>My Products</h2>
+      <p>View and manage your existing products.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><i class="fas fa-clipboard-list"></i></div>
+      <h2>Orders</h2>
+      <p>Track and update your orders efficiently.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><i class="fas fa-user-circle"></i></div>
+      <h2>Profile</h2>
+      <p>Update your farm profile and contact details.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Agro E-Commerce | Contact: support@ecommercefarm.com
+  </footer>
+</body>
+</html>

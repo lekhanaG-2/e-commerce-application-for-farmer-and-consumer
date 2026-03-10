@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .entity { fill:#f2f8ff; stroke:#2b6cb0; stroke-width:2 }
+    .process { fill:#fff7ed; stroke:#dd6b20; stroke-width:3 }
+    .datastore { fill:#f7fff7; stroke:#2f855a; stroke-width:2 }
+    .label { font-family: Arial, Helvetica, sans-serif; font-size:14px; fill:#1a202c }
+    .title { font-family: Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; fill:#1a202c }
+    .arrow { stroke:#4a5568; stroke-width:2; fill:none; marker-end:url(#arrowhead) }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" class="title">DFD Level 0 — LekhProject (High-level)</text>
+
+  <!-- External Entities (left) -->
+  <rect x="30" y="90" width="170" height="70" rx="8" class="entity"/>
+  <text x="115" y="120" text-anchor="middle" class="label">Consumer</text>
+  <text x="115" y="138" text-anchor="middle" class="label">(browse, order)</text>
+
+  <rect x="30" y="190" width="170" height="70" rx="8" class="entity"/>
+  <text x="115" y="220" text-anchor="middle" class="label">Farmer</text>
+  <text x="115" y="238" text-anchor="middle" class="label">(manage products)</text>
+
+  <rect x="30" y="290" width="170" height="70" rx="8" class="entity"/>
+  <text x="115" y="320" text-anchor="middle" class="label">Admin</text>
+  <text x="115" y="338" text-anchor="middle" class="label">(manage site)</text>
+
+  <!-- Central Process -->
+  <g>
+    <rect x="310" y="110" width="460" height="260" rx="18" class="process"/>
+    <text x="540" y="170" text-anchor="middle" class="title">0 — LekhProject System</text>
+    <text x="540" y="200" text-anchor="middle" class="label">Order & Product Management, Authentication, Notifications</text>
+  </g>
+
+  <!-- Data Stores (right) -->
+  <rect x="860" y="90" width="280" height="120" rx="6" class="datastore"/>
+  <text x="1000" y="115" text-anchor="middle" class="label">Application Database</text>
+  <text x="1000" y="135" text-anchor="middle" class="label">(Users, Products, Orders,</text>
+  <text x="1000" y="155" text-anchor="middle" class="label">Wishlist, Carts, SpecialOrders, Notifications)</text>
+
+  <rect x="860" y="240" width="280" height="80" rx="6" class="datastore"/>
+  <text x="1000" y="270" text-anchor="middle" class="label">File Store</text>
+  <text x="1000" y="290" text-anchor="middle" class="label">(`uploads/` images & files)</text>
+
+  <!-- Arrows from entities to process -->
+  <path d="M200 125 L310 150" class="arrow" />
+  <text x="260" y="140" class="label">login, browse</text>
+
+  <path d="M200 225 L310 180" class="arrow" />
+  <text x="260" y="200" class="label">inventory updates</text>
+
+  <path d="M200 325 L310 230" class="arrow" />
+  <text x="260" y="250" class="label">admin actions</text>
+
+  <!-- Arrows from process to datastores -->
+  <path d="M770 160 L860 140" class="arrow" />
+  <text x="815" y="150" class="label">read/write data</text>
+
+  <path d="M770 230 L860 280" class="arrow" />
+  <text x="815" y="250" class="label">store/retrieve files</text>
+
+  <!-- Arrows return from datastore to process -->
+  <path d="M860 200 L770 230" class="arrow" />
+
+  <!-- Additional flows: process -> entities (responses/notifications) -->
+  <path d="M770 240 L200 240" class="arrow" />
+  <text x="485" y="250" class="label">order confirmations, notifications</text>
+
+  <!-- Footer note -->
+  <text x="20" y="680" class="label">Generated: DFD Level 0 — shows high-level data flows. For Level 1, break process `0` into sub-processes (Auth, Product Catalog, Order Processing, Notifications).</text>
+
+</svg>
