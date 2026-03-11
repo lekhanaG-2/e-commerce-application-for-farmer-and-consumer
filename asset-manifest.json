@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/e-commerce-application-for-farmer-and-consumer/static/css/main.2adc4c5a.css",
+    "main.js": "/e-commerce-application-for-farmer-and-consumer/static/js/main.81969677.js",
+    "static/js/453.dc6efc16.chunk.js": "/e-commerce-application-for-farmer-and-consumer/static/js/453.dc6efc16.chunk.js",
+    "index.html": "/e-commerce-application-for-farmer-and-consumer/index.html",
+    "main.2adc4c5a.css.map": "/e-commerce-application-for-farmer-and-consumer/static/css/main.2adc4c5a.css.map",
+    "main.81969677.js.map": "/e-commerce-application-for-farmer-and-consumer/static/js/main.81969677.js.map",
+    "453.dc6efc16.chunk.js.map": "/e-commerce-application-for-farmer-and-consumer/static/js/453.dc6efc16.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2adc4c5a.css",
+    "static/js/main.81969677.js"
+  ]
+}
